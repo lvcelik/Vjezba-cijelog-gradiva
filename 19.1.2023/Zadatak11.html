@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .moj-brojac {
+            margin-left: 0;
+            padding-right: 0;
+            list-style-type: none;
+        }
+
+        .moj-brojac li::before {
+            content: "0";
+            margin-right: 5px;
+            font-size: 80%;
+            background-color: rgb(255, 0, 0);
+            color: blue;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        .moj-brojac li::before {
+            content: counter(step-counter);
+            margin-right: 5px;
+            font-size: 80%;
+            background-color: rgb(255, 0, 0);
+            color: blue;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        .moj-brojac li {
+            counter-increment: step-counter;
+        }
+
+        span::after {
+            content: "\2713";
+            color: green;
+            font-weight: 900;
+            font-size: 16px;
+        }
+        .moj-brojac li{
+            counter-increment: step-counter;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <ol class="moj-brojac">
+        <li><span>prvi element</span></li>
+        <li>drugi element</li>
+        <li>treći element</li>
+        <li>četvrti element</li>
+        <li><span>peti element</span></li>
+        <li>šesti element</li>
+    </ol>
+</body>
+
+</html>
