@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: grey;
+            overflow-x: hidden;
+        }
+
+        div {
+            background-color: white;
+            width: 300px;
+            border: 15px solid ;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        h1:before {
+            background-color: green;
+            padding: 0 100px;
+            content: " ";
+
+        }
+
+        h1:after {
+            background-color: red;
+            padding: 0 100px;
+            content: " ";
+        }
+
+        hr {
+            clear: both;
+            border: 1px solid transparent;
+            height: 0px;
+        }
+
+        h1 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        
+        <h1>Traka pune širine s pseudo elemntima</h1>
+        <div>
+        Koristeći pseudoelemente :before i :after, možemo proširiti prividnu pozadinu elementa h2 izvan section u
+            kojem se nalazi
+        <hr>
+        Nažalost, ovo pokreće horizontalnu traku za pomicanje , tako da moramo postaviti i html i body elemente na
+            overflow-x:hidden
+        <hr>
+        Osim ako vam nije potrebna dodatna fleksibilnost oblikovanja obje strane (različite boje, visine, širine,
+            gradijetni itd.), postoji jednostavniji pristup koji koristi negativne margine i ispune
+        </div>
+        
+        
+    </section>
+
+</body>
+
+</html>
