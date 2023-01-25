@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja stranica sa vertikalnim tabovima</title>
+    <style>
+        .Header{
+            float: left;
+            width: 100%;
+            padding: 0.5em 0;
+        }
+        .Header h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #6a4aed;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+            line-height: normal;
+        }
+        header{
+            display: block;
+        }
+        div.header-line{
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 25rem;
+            background: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .full-width-header{
+            position: relative;
+            margin: 0 -30px;
+            padding: .25rem 30px;
+            background: white;
+            color: white;
+            font-size: 1.125rem;
+        }
+        .full-width-header::before,.full-width-header::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 960px;
+            right: 100%;
+            background: red;
+        }
+        .full-width-header::after{
+            width: 960px;
+            left: 100%;
+            background: blue;
+        }
+        .content{
+            line-height: 28px;
+        }
+        .tabs-container{
+            position: relative;
+            background: #2652cc;
+            width: 120px;
+            height: 100vh;
+            float: left;
+            z-index: 20;
+        }
+        .tabs-container label{
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid;
+            display: block;
+            font-size: 13px;
+            color: whitesmoke;
+            cursor: pointer;
+            user-select: none;
+        }
+        .tabs-container label:hover{
+            background: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <header class="Header">
+        <div class="header-line">
+            <h1 class="full-width-header">Moja stranica sa vertikalnim tabovima</h1>
+        </div>
+    </header>
+    <div class="content">
+        <section>
+            <label for="tab1">Priroda</label>
+            <label for="tab2">Cvijeće</label>
+            <label for="tab3">Planine</label>
+            <label for="tab4">Zgrade</label>
+            <label for="tab5">Ceste</label>
+            <label for="tab6">Šume</label>
+        </section>
+
+        <input name="tab" id="tab1" type="radio" checked />
+        <section>
+            <h2>Priroda</h2>
+            <p>Neki moj tekst koji je povezan sa prirodom</p>
+                <img src="img/sea.jpg" alt="More" />
+            <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
+        </section>
+
+        <input name="tab" id="tab2" type="radio" />
+        <section>
+            <h2>Cvijeće</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <img src="img/flowers.jpg" alt="Cvijeće" />
+        </section>
+
+        <input name="tab" id="tab3" type="radio" checked />
+        <section>
+            <h2>Planine</h2>
+            <p>Neki moj tekst koji je povezan sa prirodom</p>
+                <img src="img/sea.jpg" alt="More" />
+            <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
+        </section>
+
+        <input name="tab" id="tab4" type="radio" checked />
+        <section>
+            <h2>Zgrade</h2>
+            <p>Neki moj tekst koji je povezan sa prirodom</p>
+                <img src="img/sea.jpg" alt="More" />
+            <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
+        </section>
+    </div>
+
+</body>
+</html>
