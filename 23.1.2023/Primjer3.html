@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p+p{
+            text-transform: uppercase;
+        }
+        div + p + span{
+            color: red;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Prvi općeniti paragraf na kojem nema nikakve primjene stila</p>
+    <p>Drugi paragraf koji je neposredan susjed prethodnog paragrafa i na njemu primjenjujemo svojstvo tekstalne
+        transforamacije velikih slova</p>
+    <hr>
+    <div>
+        <p>Ovo je paragraf unutar div elementa i na njega ne želimo primjeniti nikakva svojstva</p>
+    </div>
+    <hr>
+    <div>Ovo je drugi primjer u kojem je ovaj tekst unutar div elementa</div>
+    <p>Ovaj tekst je paragraf u istoj strukturi kao i div element</p>
+    <span>Ovaj tekst je span element, u istoj strukturi kao prethodni div i paragraf element, te je na njega primjenjeno
+        svojstvo neposrednog susjeda.</span>
+
+</body>
+
+</html>
