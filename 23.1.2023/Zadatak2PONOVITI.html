@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja stranica sa vertikalnim tabovima</title>
+    <link rel="stylesheet" href="CSS/styles.css">
     <style>
-        .Header{
+        .Header {
             float: left;
             width: 100%;
             padding: 0.5em 0;
         }
-        .Header h1{
+
+        .Header h1 {
             font-family: Arial, Helvetica, sans-serif;
             color: #6a4aed;
             font-size: 26px;
@@ -19,10 +22,12 @@
             margin: 0;
             line-height: normal;
         }
-        header{
+
+        header {
             display: block;
         }
-        div.header-line{
+
+        div.header-line {
             box-sizing: border-box;
             margin: 0 auto;
             width: 25rem;
@@ -30,7 +35,8 @@
             padding: 30px;
             text-align: center;
         }
-        .full-width-header{
+
+        .full-width-header {
             position: relative;
             margin: 0 -30px;
             padding: .25rem 30px;
@@ -38,7 +44,9 @@
             color: white;
             font-size: 1.125rem;
         }
-        .full-width-header::before,.full-width-header::after{
+
+        .full-width-header::before,
+        .full-width-header::after {
             content: "";
             position: absolute;
             top: 0;
@@ -47,15 +55,18 @@
             right: 100%;
             background: red;
         }
-        .full-width-header::after{
+
+        .full-width-header::after {
             width: 960px;
             left: 100%;
             background: blue;
         }
-        .content{
+
+        .content {
             line-height: 28px;
         }
-        .tabs-container{
+
+        .tabs-container {
             position: relative;
             background: #2652cc;
             width: 120px;
@@ -63,7 +74,8 @@
             float: left;
             z-index: 20;
         }
-        .tabs-container label{
+
+        .tabs-container label {
             position: relative;
             padding: 10px;
             border-bottom: 1px solid;
@@ -73,16 +85,19 @@
             cursor: pointer;
             user-select: none;
         }
-        .tabs-container label:hover{
+
+        .tabs-container label:hover {
             background: darkslateblue;
         }
-        input[name="tab"]{
+
+        input[name="tab"] {
             display: none;
         }
-        .tab-content{
+
+        .tab-content {
             position: relative;
             background: #eee;
-            width: calc(100%-120px);
+            width: calc(100% - 120px);
             min-height: 100vh;
             padding: 15px;
             float: left;
@@ -90,29 +105,35 @@
             z-index: 19;
             display: none;
         }
-        input[name="tab"]:checked + .tab-content{
+
+        input[name="tab"]:checked+.tab-content {
             display: block;
             animation: slide 0.5s forwards;
         }
-        .tab-content:after{
+
+        .tab-content:after {
             content: "";
             clear: both;
         }
-        .tabs-container label:hover{
+
+        .tabs-container label:hover {
             background: darkslateblue;
         }
-        @keyframes slide{
-            from{
-                left:-100%;
+
+        @keyframes slide {
+            from {
+                left: -100%;
                 opacity: 0;
             }
-            to{
+
+            to {
                 left: 0;
                 opacity: 1;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="Header">
         <div class="header-line">
@@ -127,13 +148,15 @@
             <label for="tab4">Zgrade</label>
             <label for="tab5">Ceste</label>
             <label for="tab6">Šume</label>
+            <label for="tab7">Fancy cards</label>
         </section>
 
         <input name="tab" id="tab1" type="radio" checked />
         <section class="tab-content">
             <h2>Priroda</h2>
             <p>Neki moj tekst koji je povezan sa prirodom</p>
-                <img src="C:\VJEŽBA GRADIVA NOVO LV\Vjezba-cijelog-gradiva\Vjezba-cijelog-gradiva-9\Pictures\Priroda.jpg" alt="More" />
+            <img src="C:\VJEŽBA GRADIVA NOVO LV\Vjezba-cijelog-gradiva\Vjezba-cijelog-gradiva-9\Pictures\Priroda.jpg"
+                alt="More" />
             <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
         </section>
 
@@ -148,7 +171,7 @@
         <section class="tab-content">
             <h2>Planine</h2>
             <p>Neki moj tekst koji je povezan sa prirodom</p>
-                <img src="img/sea.jpg" alt="More" />
+            <img src="img/sea.jpg" alt="More" />
             <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
         </section>
 
@@ -156,25 +179,84 @@
         <section class="tab-content">
             <h2>Zgrade</h2>
             <p>Neki moj tekst koji je povezan sa prirodom</p>
-                <img src="img/sea.jpg" alt="More" />
+            <img src="img/sea.jpg" alt="More" />
             <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
         </section>
         <input name="tab" id="tab5" type="radio" />
         <section class="tab-content">
             <h2>Ceste</h2>
             <p>Neki moj tekst koji je povezan sa prirodom</p>
-                <img src="img/sea.jpg" alt="More" />
+            <img src="img/sea.jpg" alt="More" />
             <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
         </section>
         <input name="tab" id="tab6" type="radio" />
         <section class="tab-content">
             <h2>Šume</h2>
             <p>Neki moj tekst koji je povezan sa prirodom</p>
-                <img src="img/sea.jpg" alt="More" />
+            <img src="img/sea.jpg" alt="More" />
             <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
+        </section>
+        <input name="tab" id="tab7" type="radio" />
+        <section class="tab-content">
+            <h2>Fancy cards</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="width: 128px;" src="./img/Slika0.png">
+                            <h3>Design</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quascumqe minus iste veritatis provident
+                                at</p>
+                            <a href="#">Read More</a>
+                        </div>
+        
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="width: 128px;" src="./img/Slika1.png">
+                            <h3>Design</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quascumqe minus iste veritatis provident
+                                at</p>
+                            <a href="#">Read More</a>
+                        </div>
+        
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="width: 128px;" src="./img/Slika2.png">
+                            <h3>Design</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quascumqe minus iste veritatis provident
+                                at</p>
+                            <a href="#">Read More</a>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+
         </section>
 
     </div>
 
 </body>
+
 </html>
