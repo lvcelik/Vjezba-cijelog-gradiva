@@ -1,0 +1,57 @@
+.content {
+    line-height: 28px;
+}
+
+.tabs-container {
+    position: relative;
+    background: #2652cc;
+    width: 120px;
+    height: 100vh;
+    float: left;
+    z-index: 20;
+}
+
+.tabs-container label {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid;
+    display: block;
+    font-size: 13px;
+    color: whitesmoke;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tabs-container label:hover {
+    background: darkslateblue;
+}
+
+input[name="tab"] {
+    display: none;
+}
+
+.tab-content {
+    position: relative;
+    background: #eee;
+    width: calc(100% - 120px);
+    min-height: 100vh;
+    padding: 15px;
+    float: left;
+    box-sizing: border-box;
+    z-index: 19;
+    display: none;
+}
+
+input[name="tab"]:checked+.tab-content {
+    display: block;
+    animation: slide 0.5s forwards;
+}
+
+.tab-content:after {
+    content: "";
+    clear: both;
+}
+
+.tabs-container label:hover {
+    background: darkslateblue;
+}
