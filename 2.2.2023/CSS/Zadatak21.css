@@ -1,0 +1,30 @@
+body{
+    margin: 10px;
+    max-width: 16 * 50px; /* 50em */
+    padding: 16px 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-gap: 1em;
+}
+
+header, footer{
+    grid-column: 1 / 4;
+}
+@media all and (max-width: 700px){
+    aside,
+    article{
+        grid-column: 1 / 4;
+    }
+}
+
+/* za sve elemente postavljamo zajednička svojstva */
+header, aside, article, footer{
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
