@@ -1,0 +1,30 @@
+div{
+    line-height: 150px;
+}
+#container{
+    top: 25px;
+    left: 25px;
+    position: absolute;
+}
+.group{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+}
+.original, .transformed{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    position: absolute;
+}
+.transformed{
+    background-color: tomato;
+    opacity: 0.8;
+}
+#transformed-1{transform: rotate(45deg);}
+#transformed-2{transform: rotate(1.2rad);}
+#transformed-3{transform: rotate(0.25turn);}
+
